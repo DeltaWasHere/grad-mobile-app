@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemViewTrade"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:stretchColumns="0">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray">
+
+        <ImageView
+            android:id="@+id/tradeAvatar"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight=".17"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:scaleType="matrix"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/tradeUserInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".32"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tradeUser"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+
+                android:autoSizeTextType="uniform"
+                android:gravity="left"
+                android:padding="2dp"
+                android:text="@string/nombre_de_usuario"
+                android:textColor="@color/white" />
+
+            <RatingBar
+                android:id="@+id/tradeRating"
+                style="@style/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:layout_gravity="left"
+                android:isIndicator="true"
+               android:paddingTop="16dp"
+                android:scaleX=".7"
+                android:scaleY=".7"
+                android:numStars="5"
+                android:max="5"
+                android:stepSize="0.1" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tradeRestriction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".32"
+            android:autoSizeTextType="none"
+            android:background="@drawable/border"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="@string/restriccion"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/tradeValidation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".19"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_uncheck"
+            android:text="@string/puntuacion"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/tradeOptions"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".32"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/tradeAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_accept_offer" />
+
+            <ImageView
+                android:id="@+id/tradeCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_decline_offer" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tradeNumbers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight=".32"
+            android:background="@drawable/border"
+            android:padding="2dp"
+            android:text="@string/numero_de_ofertas"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </TableRow>
+</TableLayout>

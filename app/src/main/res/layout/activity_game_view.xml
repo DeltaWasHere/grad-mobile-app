@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mate"
+    android:orientation="vertical"
+    tools:context=".game.GameView">
+
+    <include
+        android:id="@+id/toolbarGameView"
+        layout="@layout/toolbar_game" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbutton"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/gameIcon"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/gameViewTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gameViewCompletionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/horas_de_complecion"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gameViewRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valoracion"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gameViewGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/generos"
+
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gameLeaderboard"
+            android:layout_gravity="center"
+            android:text="@string/tabla_de_clasificacion"
+            android:background="@drawable/roundlightgrey"
+            android:textColor="@color/white"
+            android:padding="2dp"
+            />
+
+        <ImageButton
+            android:id="@+id/deployGameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/deploy"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/retractGameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/retract" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/logros"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_height="20dp"
+                    android:background="@color/gray"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:autoSizeTextType="none"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/icono"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:autoSizeTextType="none"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/informacion"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/etiquetas"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/rareza"
+                        android:textColor="@color/white" />
+
+
+                </TableRow>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/achievementsTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/logros_desbloqueados"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TableLayout
+                android:id="@+id/unlockedAchievementsTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_height="20dp"
+                    android:background="@color/gray"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:autoSizeTextType="none"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/icono"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:autoSizeTextType="none"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/informacion"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/etiquetas"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:text="@string/fecha"
+                        android:textColor="@color/white" />
+
+
+                </TableRow>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/unlockedAchievementsTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

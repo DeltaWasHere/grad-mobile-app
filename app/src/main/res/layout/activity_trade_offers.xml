@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mate"
+    tools:context=".trade.tradeOffers">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/publicaciones_ofertadas"
+        android:textColor="@color/white"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".17"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:text="@string/avatar"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".32"
+                android:autoSizeTextType="none"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:text="@string/usuario"
+                android:textColor="@color/white" />
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".19"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="@string/validado"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".32"
+                android:autoSizeTextType="none"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:text="@string/opciones"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTradeOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </TableLayout>
+</LinearLayout>

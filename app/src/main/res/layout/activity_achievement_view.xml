@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mate"
+    android:orientation="vertical"
+    tools:context=".game.GameView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbutton"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/gameIcon"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/gameViewTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gameViewCompletionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/horas_de_complecion"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gameViewRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valoracion"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/gameViewGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/generos"
+
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/deployGameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/deploy"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/retractGameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/retract" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoButton"
+                android:padding="5dp"
+                android:text="@string/informacion"
+                android:background="@drawable/roundachievement"
+                android:textColor="@color/light_gray"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tagsButton"
+                android:padding="5dp"
+                android:text="@string/etiquetas"
+                android:background="@drawable/roundachievement"
+                android:textColor="@color/light_gray"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guidesButton"
+                android:padding="5dp"
+                android:text="@string/guias"
+                android:background="@drawable/roundachievement"
+                android:textColor="@color/light_gray"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/editGuide"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_edit"
+                android:background="@drawable/roundbutton"
+
+                />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/achievementContent"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

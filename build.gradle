@@ -1,0 +1,23 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+import java.nio.file.Paths
+
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task convertXmlToResources(type: Exec) {
+    def rootPath = rootProject.projectDir.absolutePath
+    def directory = Paths.get(rootPath, "app", "src", "main", "res")
+    def files = fileTree(directory).matching {
+        include '**/*.xml'
+    }
+    def scriptPath = System.getProperty("user.dir") + "groovy_console.groovy"
+
+
+    commandLine 'groovy', '-cp', rootPath, 'path/to/your/script.groovy', files.getAsPath()
+}

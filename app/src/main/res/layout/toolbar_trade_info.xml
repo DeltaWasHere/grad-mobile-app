@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbarTradeInfo"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+
+    android:background="@color/oscuro"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <ImageButton
+        android:id="@+id/offerSend"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:layout_marginRight="10dp"
+        android:visibility="visible"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_trade_add" />
+
+    <ImageButton
+        android:id="@+id/getKey"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_trade" />
+
+    <ImageButton
+        android:id="@+id/addRate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:src="@drawable/rate_icon" />
+
+
+
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mate"
+    android:padding="10dp"
+    tools:context=".trade.fragmentPublishedTrades">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundlightgrey"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <SearchView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".9"
+                android:queryHint="AppId" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ofertas_publicadas"
+                        android:textColor="@color/white"/>
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:layout_height="20dp"
+                            android:background="@color/gray"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".17"
+                                android:autoSizeTextType="uniform"
+                                android:background="@drawable/border"
+                                android:padding="10dp"
+                                android:text="@string/avatar"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".32"
+                                android:autoSizeTextType="none"
+                                android:background="@drawable/border"
+                                android:padding="10dp"
+                                android:text="@string/restriccion"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".19"
+                                android:autoSizeMaxTextSize="5dp"
+                                android:autoSizeTextType="none"
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/validado"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".32"
+                                android:autoSizeTextType="none"
+                                android:background="@drawable/border"
+                                android:padding="10dp"
+                                android:text="@string/numero_de_ofertas"
+                                android:textColor="@color/white" />
+                        </TableRow>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerTrades"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+                    </TableLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publicaciones_ofertadas"
+                        android:textColor="@color/white"/>
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:layout_height="20dp"
+                            android:background="@color/gray"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".17"
+                                android:autoSizeTextType="uniform"
+                                android:background="@drawable/border"
+                                android:padding="10dp"
+                                android:text="@string/avatar"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".32"
+                                android:autoSizeTextType="none"
+                                android:background="@drawable/border"
+                                android:padding="10dp"
+                                android:text="@string/avatar"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".32"
+                                android:autoSizeTextType="none"
+                                android:background="@drawable/border"
+                                android:padding="10dp"
+                                android:text="@string/restriccion"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".19"
+                                android:autoSizeTextType="uniform"
+                                android:background="@drawable/border"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:text="@string/validado"
+                                android:textColor="@color/white" />
+                        </TableRow>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerOffers"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </ScrollView>
+                    </TableLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="1"
+    android:background="@color/mate"
+    android:orientation="vertical"
+    tools:context=".profile.profileView"
+    android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+    <include
+        layout="@layout/toolbar_default"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/profileViewName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:text="@string/nombre"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/profileViewAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:padding="4dp"
+                android:src="@drawable/user_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text="@string/puntuacion"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/profileViewPoints"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text="@string/puntuacion"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text="@string/posicion"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/profileViewPosition"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text="@string/posicion"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:layout_gravity="center"
+                android:background="@drawable/user_icon"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logros_mas_valiosos"
+        android:textColor="@color/white" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="5">
+
+        <ImageView
+            android:id="@+id/valuableAchievement1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+
+            />
+
+        <ImageView
+            android:id="@+id/valuableAchievement2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+
+        <ImageView
+            android:id="@+id/valuableAchievement3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+
+        <ImageView
+            android:id="@+id/valuableAchievement4"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+
+        <ImageView
+            android:id="@+id/valuableAchievement5"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+    </GridLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logros_mas_recientes"
+        android:textColor="@color/white" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="5">
+
+        <ImageView
+            android:id="@+id/recentAchievement1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+
+            />
+
+        <ImageView
+            android:id="@+id/recentAchievement2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+
+        <ImageView
+            android:id="@+id/recentAchievement3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+
+        <ImageView
+            android:id="@+id/recentAchievement4"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+
+        <ImageView
+            android:id="@+id/recentAchievement5"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
+            android:scaleType="matrix"
+            android:src="@drawable/user_icon"
+            />
+    </GridLayout>
+    <TextView
+        android:id="@+id/ownedGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/juegos_en_coleccion"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/pinnedGames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/juegos_pineados"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/guidesWrited"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guias_realizadas"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/threadsGenerated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/hilos_generados"
+        android:textColor="@color/white" />
+
+</LinearLayout>

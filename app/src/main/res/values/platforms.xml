@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "arrayPlatforms">
+        <item>steam</item>
+        <item>xbox</item>
+        <item>ps</item>
+    </string-array>
+</resources>
