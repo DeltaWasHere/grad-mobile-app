@@ -1,10 +1,10 @@
-This API is part of the backend for my Technician Career which featured a 700 pages of documentation(document is in private, pm me if you want to see it).
+This mobile app is one of the clients for my Technician Career which featured a 700 pages of documentation(document is in private, pm me if you want to see it).
 Refere here for the [web-app](https://github.com/DeltaWasHere/web-app), [desktop-app](https://github.com/DeltaWasHere/desktop-app), [api](https://github.com/DeltaWasHere/api) and [discord-bot](https://github.com/DeltaWasHere/discord-bot)
 
-This mobile app serves as the mobile view of the web app but its code entirely on Java using the android SDK to run natively.
+This mobile app serves as the mobile view of the web app, but it's coded entirely in Java using the Android SDK to run natively.
 
 ## File uploads
-File upload was something that I tought was gonna be used since I  had been developing mobile apps for almost 2 years at this point(school mainly) but ended up in the rabbit hole of how this represented a big vulnerability for the android system and was changed from only being the file picker that returned the file path to having to use a cursor to loop trough the file path and get the file. 
+I initially thought file upload would be needed, since I had been developing mobile apps for nearly two years at that point (mainly for school), but I ended up going down a rabbit hole regarding how this posed a significant vulnerability for the Android system. As a result, I changed the implementation from simply using a file picker that returned the file path to using a cursor to loop through the file path and retrieve the file securely. 
 
 ## Web view manipulation
-Sine the authentication is a redirection into the Steam or Xbox OAuth I manipulated the Web view to handle the redirections of the url done by the page and extracting the authentication data from the webview into the application, permitting a way way better flow.
+Since authentication involves redirection to Steam or Xbox OAuth, I manipulated the WebView to handle URL redirections made by the page and extract the authentication data into the app, resulting in a much smoother flow.
